@@ -1,7 +1,18 @@
 *{ box-sizing: border-box;}
 
     body{
+        padding: 0;
         margin: 0;
+    }
+
+    footer{
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 14px;
+        border-top: 1px solid #ccc;
+        padding: 15px 0;
     }
 
     .baslik {
@@ -10,24 +21,154 @@
         text-align: center;
     }
 
-    .icerikler{
+    .container{
         overflow: hidden;
         background-color: #333;
+        background: url(projeye.jpg);
+        background-size: 100% 100%;
+        height: 100vh;
 
     }
 
-    .icerikler a{
-        float: right;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 15px 15px;
-        text-decoration: none;
-        padding-left: 60px;
-
+    .container .navbar{
+        width: 100%;
+        height: 80px;
+        background:lightblue;
+        margin-right: 20px;
+        margin-top: 8px;
     }
 
-    .icerikler a:hover{
-        background-color: #ddd;
-        color: black;
-    }
+   .navbar ul{
+    float: right;
+    margin-right: 20px;
+   }
+
+   .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 50px;
+   }
+
+   .navbar ul li a{
+    position: relative;
+    top: 10px;
+    color:black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: sans-serif;
+   }
+    
+   .navbar ul li a:hover{
+    background: #ff6e00;
+    border-radius: 2px;
+   }
+        
+    .center{
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    transform: translate(-50% -50%);
+    font-family: sans-serif;
+    user-select: none;
+   }
+   .center h1{
+    color: black;
+    font-weight: bold;
+    font-size: 70px;
+    width: 900px;
+    text-align: center;
+   }
+
+   .center h2{
+    font-size: 50px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;
+   }
+
+   .box{
+    background-size: cover;
+    width: 450px;
+    background: #6b5858;
+    padding: 40px;
+    text-align: center;
+    margin: left;
+    height: 600px;
+    width: 880px;
+
+   }
+
+   .box p,h1, h3{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+   }
+   .box img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+   }
+
+   ul{
+    margin: 0;
+    padding: 0;
+   }
+
+   .box li{
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+   }
+
+   .box li a{
+    color: white;
+    font-size: 60px;
+    transition: all ease-in-out 250ms;
+   }
+
+   .box li a:hover{
+    color: #b9b9b9;
+   }
+
+  
+   .right img{
+    position: absolute;
+    right: 520px;
+    top: 100%;
+    margin: right;
+    width: 500px;
+    height: 250px;
+   }
+
+   .right p{
+    position: absolute;
+    width: 400px;
+    display: flex;
+    right: 55;
+    top: 100%;
+    margin: right;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+   }
+
+   .right .handball img{
+    display: flex;
+    top:1204px;
+    position: absolute;
+    height:345px;
+    width:500px;
+   }
+
+   .right .handball p{
+    right: 55;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 1230px;
+   }
