@@ -80,8 +80,12 @@
       box-shadow: 0 0 10px #ccc;
     }
 
+    h1{
+      text-align: center;
+    }
     h2 {
       color: #2e3b4e;
+      text-align: center;
     }
 
     section {
