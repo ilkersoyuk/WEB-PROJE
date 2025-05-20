@@ -38,7 +38,7 @@ header h1 {
 
 .education .right
 .education .left{
-    width: 48%;
+    width: 28%;
 }
 
 .iletisim ul{
@@ -83,7 +83,6 @@ ul.skills-list li {
     font-size: 0.9rem;
     padding: 5px 15px;
 }
-
 
 
 .navbar {
