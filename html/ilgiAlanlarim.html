@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İlgi Alanlarım - Kamp Yapmak</title>
+  <link rel="stylesheet" href="../css/ilgiAlanlarim.css">
+    
+  
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <ul> 
+            <li> <a href="../html/hakkimda.html" >HAKKIMDA</a></li>
+            <li> <a href="../html/ilgiAlanlarim.html">İLGİ ALANLARIM </a></li>
+            <li> <a href="../html/ozgecmisim.html">ÖZGEÇMİŞİM</a></li>
+            <li> <a href="../html/memleketim.html">MEMLEKETİM</a></li>
+            <li> <a href="../html/takimim.html">TAKIMIM</a></li>
+            <li> <a href="../html/iletisim.html">İLETİŞİM</a></li>
+            </ul>
+        </div>
+    </div>
+  <h1>İlgi Alanım: Kamp Yapmak 🏕️</h1>
+
+  <div class="section">
+    <h2>Kamp Yapmayı Neden Seviyorum?</h2>
+    <p>
+    Kamp yapmak, doğayla iç içe olmanın en güzel yollarından biridir.
+    Teknolojiden uzaklaşıp doğanın sesini dinlemek, temiz hava solumak ve yıldızların altında uyumak bana huzur veriyor.
+    Ayrıca kamp, sevdiklerimle kaliteli zaman geçirmeme ve kendimi yeniden keşfetmeme yardımcı oluyor.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Kamp Nasıl Yapılır?</h2>
+    <ul>
+      <li><strong>Hazırlık Yap:</strong> İyi bir kamp için uygun ekipman gerekir. Çadır, uyku tulumu, fener ve temel yiyecekleri unutmamalısın.</li>
+      <li><strong>Yer Seçimi:</strong> Güvenli, düz ve su kaynağına yakın bir yer tercih edilmelidir.</li>
+      <li><strong>Kamp Kur:</strong> Çadırı güneşten korunaklı, rüzgâra karşı korumalı bir yere kur.</li>
+      <li><strong>Doğaya Saygı Göster:</strong> Çöp bırakmamak, ateşi kontrol altında tutmak ve çevreyi rahatsız etmemek önemlidir.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Bugün Ne Yapabilirim?</h2>
+    <p>Kamp yapmak dışında, doğa ile ilgili öneri almak ister misin? Aşağıdaki butona tıkla!</p>
+    <button onclick="getCampingSuggestion()">Kamp Aktivitesi Öner</button>
+    <p id="activity" style="margin-top: 15px; font-weight: bold;">Henüz bir öneri alınmadı.</p>
+  </div>
+
+  <div class="section">
+    <h2>Yakındaki Kamp Alanları</h2>
+    <p>Yakınınızdaki kamp alanlarını görmek için aşağıdaki butona tıklayın:</p>
+    <button onclick="getCampgrounds()">Kamp Alanlarını Göster</button>
+    <div id="campgrounds"></div>
+  </div>
+
+  <script>
+    function getCampingSuggestion() {
+      fetch('https://www.boredapi.com/api/activity?type=recreational')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('activity').textContent = 'Önerilen aktivite: ' + data.activity;
+        })
+        .catch(error => {
+          document.getElementById('activity').textContent = 'Bir hata oluştu, lütfen tekrar deneyin.';
+          console.error(error);
+        });
+    }
+
+    function getCampgrounds() {
+      fetch('https://campflare.com/api/campgrounds?state=CA') // Örnek olarak California eyaleti kullanıldı
+        .then(response => response.json())
+        .then(data => {
+          const campgroundsDiv = document.getElementById('campgrounds');
+          campgroundsDiv.innerHTML = '';
+          data.campgrounds.forEach(campground => {
+            const div = document.createElement('div');
+            div.className = 'campground';
+            div.innerHTML = `<strong>${campground.name}</strong><br>${campground.location}`;
+            campgroundsDiv.appendChild(div);
+          });
+        })
+        .catch(error => {
+          document.getElementById('campgrounds').textContent = 'Kamp alanları yüklenemedi. Lütfen tekrar deneyin.';
+          console.error(error);
+        });
+    }
+  </script>
+
+</body>
+</html>

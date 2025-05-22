@@ -1,0 +1,76 @@
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fdf4;
+      color: #2e3b2c;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .container{
+        overflow: hidden;
+        background-size: 100% 100%;
+    }
+
+    .container .navbar{
+        width: 100%;
+        height: 80px;
+        background:lightblue;
+        margin-right: 20px;
+        margin-top: 8px;
+    }
+
+   .container .navbar ul{
+    float: right;
+    margin-right: 20px;
+   }
+
+   .container .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 50px;
+   }
+
+   .container .navbar ul li a{
+    position: relative;
+    top: 10px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: sans-serif;
+   }
+    
+   .container .navbar ul li a:hover{
+    background: #ff6e00;
+    border-radius: 2px;
+   }
+    h1, h2 {
+      color: #2e7d32;
+    }
+    .section {
+      background: #ffffff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    button {
+      background-color: #43a047;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    #campgrounds {
+      margin-top: 15px;
+    }
+    .campground {
+      margin-bottom: 10px;
+    }

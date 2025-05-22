@@ -3,6 +3,8 @@
         input, select, textarea { width: 300px; padding: 5px; }
         .error { color: red; }
         .button-container { margin-top: 20px; }
+
+        
     .container{
         overflow: hidden;
         background-size: 100% 100%;

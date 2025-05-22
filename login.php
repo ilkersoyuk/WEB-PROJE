@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($email == 'b241210059@sakarya.edu.tr' && $password == 'b241210059') {
         echo "Hoşgeldiniz b241210059";
-        echo "<script>setTimeout(function(){ window.location.href = 'hakkimda.html'; }, 2000);</script>";
+        echo "<script>setTimeout(function(){ window.location.href = '../html/hakkimda.html'; }, 2000);</script>";
         exit();
     } 
     else {
