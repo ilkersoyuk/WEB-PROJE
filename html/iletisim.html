@@ -135,12 +135,19 @@
             }
         }
     });
+    
+    if(errors.length > 0) {
+        errorDiv.innerHTML = errors.join("<br>");
+    }
+    else {
+        errorDiv.innerHTML = "Form Başarıyla Gönderildi"
+    }
+
     </script>
 
-    
-
+  
     <footer>
-            <p>&copy; Bu Sitenin Tüm Hakları İlker Ahmet Söyük'e Aittir.</p>
+        <p>&copy; Bu Sitenin Tüm Hakları İlker Ahmet Söyük'e Aittir.</p>
     </footer>
 </body>
 </html>
